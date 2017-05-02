@@ -1,6 +1,6 @@
 # quexml-docker
 
-Docker image for queXML based on tutum/apache-php
+Docker image for queXML based on the official PHP image
 
 
 Usage
