@@ -1,6 +1,6 @@
 # quexml-docker
 
-Docker image for queXML based on tutum/apache-php
+Docker image for queXML based on the official PHP image
 
 
 Usage
@@ -22,7 +22,7 @@ queXML to have access to when creating forms.
 
 For example, you can refer to images in your queXML document like this:
 
-&lt;img src="file:///images/cats.jpg"/&gt;
+    &lt;img src="file:///images/cats.jpg"/&gt;
 
 Access queXML by visiting:
 
