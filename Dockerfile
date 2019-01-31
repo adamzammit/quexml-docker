@@ -3,8 +3,9 @@ FROM php:7-apache
 MAINTAINER Adam Zammit <adam.zammit@acspri.org.au>
 
 #Install requirements above base
-RUN apt-get update && apt-get install -y libzip-dev bzr wget unzip libxslt-dev && rm -rf /var/lib/apt/lists/* \
-    && docker-php-ext-install xsl opcache zip
+RUN apt-get update && apt-get install -y libzip-dev libpng-dev libjpeg-dev bzr wget unzip libxslt-dev && rm -rf /var/lib/apt/lists/* \
+    && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
+    && docker-php-ext-install xsl opcache zip gd
 
 # set recommended PHP.ini settings
 # see https://secure.php.net/manual/en/opcache.installation.php
